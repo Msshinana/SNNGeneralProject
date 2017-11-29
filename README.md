@@ -22,3 +22,14 @@ AFNetworking<br>
        showMBProgressInView:(UIView *)view
                  completion:(HttpRequestCompletion)completion;<br>
 
+# 封装常用控件
++ (UIButton *)getImageButtonWithFrame:(CGRect )frame
+                       withNorImgFile:(UIImage *)normalImage
+                       withSelImgFile:(UIImage *)selectImage
+                           withTarget:(id)customTarget
+                              withSel:(SEL)customSel;<br>
++ (UITableView *)getTableViewWithFrame:(CGRect)frame
+                          withDelegate:(id)delegate
+                        withDateSource:(id)datesource
+                           withBGColor:(UIColor *)bgcolor;
+                           

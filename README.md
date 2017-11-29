@@ -8,4 +8,16 @@
 5、创建API.h文件用于查询接口等；<br>
 6、创建Config.h文件用于编写某些全局配置参数；<br>
 # 封装常用的第三方SDK
-## AFNetworking
+AFNetworking<br>
+/**
+ * urlString           :请求的URL
+ * params              :传参
+ * requestMethod       :get/post
+ * view                :进度条
+ * completion          :请求回调
+ */
+-(void)requestWithUrlString:(NSString *)urlString
+                 paramasDic:(NSDictionary *)params
+                     method:(HttpRequestMehod)requestMethod
+       showMBProgressInView:(UIView *)view
+                 completion:(HttpRequestCompletion)completion;

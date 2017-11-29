@@ -16,9 +16,9 @@ AFNetworking<br>
  * view                :进度条
  * completion          :请求回调
  */<br>
--(void)requestWithUrlString:(NSString *)urlString<br>
-                 paramasDic:(NSDictionary *)params<br>
-                     method:(HttpRequestMehod)requestMethod<br>
-       showMBProgressInView:(UIView *)view<br>
+-(void)requestWithUrlString:(NSString *)urlString
+                 paramasDic:(NSDictionary *)params
+                     method:(HttpRequestMehod)requestMethod
+       showMBProgressInView:(UIView *)view
                  completion:(HttpRequestCompletion)completion;<br>
 

@@ -8,6 +8,20 @@
 
 #ifndef Header_h
 #define Header_h
+#import <UIKit/UIKit.h>
+
+//全局配置参数
+#import "Config.h"
+//接口文件
+#import "Api.h"
+
+#import "CommonMethod.h"
+#import "NSDictionary+NSNull.h"
+#import "NSArray+NSNull.h"
+#import "NSString+MD5.h"
+#import "NSString+StringSize.h"
+#import "ToastMessageView.h"
+
 
 
 #endif /* Header_h */

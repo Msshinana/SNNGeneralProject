@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, NetworkErrorType) {
+    NetworkErrorTypeTimeOut         = -1000,
+    NetworkErrorTypeErrorMsg        = - 800,
+    NetworkErrorTypeNoNetConnecting = - 900
+};
+
+@class NetWorkError;
+
 @interface NetWorkError : NSError
+
++ (NetWorkError *)errorWithType:(NetworkErrorType)type andUerInfo:(NSDictionary *)userInfo;
 
 @end

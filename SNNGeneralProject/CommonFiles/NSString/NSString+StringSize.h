@@ -1,5 +1,5 @@
 //
-//  CommonMethod.h
+//  NSString+StringSize.h
 //  SNNGeneralProject
 //
 //  Created by dzcx-shinana on 2017/11/22.
@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-@interface CommonMethod : NSObject
-+ (NSString *) getTime;
-+ (NSString *) getImageName:(UIImage *)image;
+@interface NSString (StringSize)
+- (CGSize)limitSize:(CGSize)size font:(UIFont *)font;
+- (CGSize)limitSize:(CGSize)size attributes:(NSDictionary *)attributes;
 @end

@@ -1,13 +1,13 @@
 //
-//  Api.h
+//  NSString+MD5.h
 //  SNNGeneralProject
 //
 //  Created by dzcx-shinana on 2017/11/22.
 //  Copyright © 2017年 dzcx-shinana. All rights reserved.
 //
 
-#ifndef Api_h
-#define Api_h
+#import <Foundation/Foundation.h>
 
-
-#endif /* Api_h */
+@interface NSString (MD5)
++ (NSString *) md5:(NSString *)str;
+@end

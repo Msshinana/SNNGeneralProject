@@ -8,6 +8,13 @@
 
 #import "NetWorkError.h"
 
+static NSString *const NetworkErrorDomain = @"com.visionet.superfitnesscenter.errordomain";
+
 @implementation NetWorkError
+
++ (NetWorkError *)errorWithType:(NetworkErrorType)type andUerInfo:(NSDictionary *)userInfo
+{
+    return [NetWorkError errorWithDomain:NetworkErrorDomain code:type userInfo:userInfo];
+}
 
 @end

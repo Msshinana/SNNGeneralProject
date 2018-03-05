@@ -13,11 +13,43 @@
 		39D28754204CE1DB00992ECB /* CommonMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D28749204CE1DB00992ECB /* CommonMethod.m */; };
 		39D28755204CE1DB00992ECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D2874E204CE1DB00992ECB /* Assets.xcassets */; };
 		39D28756204CE1DB00992ECB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39D28750204CE1DB00992ECB /* Info.plist */; };
+		39D28759204CE3F900992ECB /* SNNHTTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D28758204CE3F900992ECB /* SNNHTTPManager.m */; };
+		39D28761204CEA1000992ECB /* MBHUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2875F204CEA1000992ECB /* MBHUDTool.m */; };
+		39D2877D204CEB2D00992ECB /* 加载_00014.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28764204CEB2D00992ECB /* 加载_00014.png */; };
+		39D2877E204CEB2D00992ECB /* 加载_00000.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28765204CEB2D00992ECB /* 加载_00000.png */; };
+		39D2877F204CEB2D00992ECB /* 加载_00001.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28766204CEB2D00992ECB /* 加载_00001.png */; };
+		39D28780204CEB2D00992ECB /* 加载_00015.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28767204CEB2D00992ECB /* 加载_00015.png */; };
+		39D28781204CEB2D00992ECB /* 加载_00003.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28768204CEB2D00992ECB /* 加载_00003.png */; };
+		39D28782204CEB2D00992ECB /* 加载_00017.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28769204CEB2D00992ECB /* 加载_00017.png */; };
+		39D28783204CEB2D00992ECB /* 加载_00016.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2876A204CEB2D00992ECB /* 加载_00016.png */; };
+		39D28784204CEB2D00992ECB /* 加载_00002.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2876B204CEB2D00992ECB /* 加载_00002.png */; };
+		39D28785204CEB2D00992ECB /* 加载_00006.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2876C204CEB2D00992ECB /* 加载_00006.png */; };
+		39D28786204CEB2D00992ECB /* 加载_00012.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2876D204CEB2D00992ECB /* 加载_00012.png */; };
+		39D28787204CEB2D00992ECB /* 加载_00013.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2876E204CEB2D00992ECB /* 加载_00013.png */; };
+		39D28788204CEB2D00992ECB /* 加载_00007.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2876F204CEB2D00992ECB /* 加载_00007.png */; };
+		39D28789204CEB2D00992ECB /* 加载_00011.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28770204CEB2D00992ECB /* 加载_00011.png */; };
+		39D2878A204CEB2D00992ECB /* 加载_00005.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28771204CEB2D00992ECB /* 加载_00005.png */; };
+		39D2878B204CEB2D00992ECB /* 加载_00004.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28772204CEB2D00992ECB /* 加载_00004.png */; };
+		39D2878C204CEB2D00992ECB /* 加载_00010.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28773204CEB2D00992ECB /* 加载_00010.png */; };
+		39D2878D204CEB2D00992ECB /* 加载_00009.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28774204CEB2D00992ECB /* 加载_00009.png */; };
+		39D2878E204CEB2D00992ECB /* 加载_00021.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28775204CEB2D00992ECB /* 加载_00021.png */; };
+		39D2878F204CEB2D00992ECB /* 加载_00020.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28776204CEB2D00992ECB /* 加载_00020.png */; };
+		39D28790204CEB2D00992ECB /* 加载_00008.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28777204CEB2D00992ECB /* 加载_00008.png */; };
+		39D28791204CEB2D00992ECB /* 加载_00022.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28778204CEB2D00992ECB /* 加载_00022.png */; };
+		39D28792204CEB2D00992ECB /* 加载_00023.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D28779204CEB2D00992ECB /* 加载_00023.png */; };
+		39D28793204CEB2D00992ECB /* 加载_00024.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2877A204CEB2D00992ECB /* 加载_00024.png */; };
+		39D28794204CEB2D00992ECB /* 加载_00018.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2877B204CEB2D00992ECB /* 加载_00018.png */; };
+		39D28795204CEB2E00992ECB /* 加载_00019.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D2877C204CEB2D00992ECB /* 加载_00019.png */; };
+		39D28799204D07A600992ECB /* NSArray+NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D28797204D07A500992ECB /* NSArray+NSNull.m */; };
+		39D2879D204D07C000992ECB /* NSDictionary+NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D2879B204D07C000992ECB /* NSDictionary+NSNull.m */; };
+		39D287A3204D093900992ECB /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D287A1204D093900992ECB /* NSString+MD5.m */; };
+		39D287A4204D093900992ECB /* NSString+StringSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D287A2204D093900992ECB /* NSString+StringSize.m */; };
+		39D287A8204D0F1200992ECB /* ToastMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D287A6204D0F1100992ECB /* ToastMessageView.m */; };
+		39D287AC204D12AF00992ECB /* ApiTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D287AB204D12AF00992ECB /* ApiTool.m */; };
 		6C8340DCB0C141363C4D8027 /* libPods-SNNGeneralProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2835B10798C379953ECA9D2 /* libPods-SNNGeneralProject.a */; };
 		CE82B23F1FC527AE00B6D756 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE82B23E1FC527AE00B6D756 /* AppDelegate.m */; };
 		CE82B2421FC527AE00B6D756 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE82B2411FC527AE00B6D756 /* ViewController.m */; };
 		CE82B2451FC527AE00B6D756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE82B2431FC527AE00B6D756 /* Main.storyboard */; };
-		CE82B2471FC527AE00B6D756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE82B2461FC527AE00B6D756 /* Assets.xcassets */; };
 		CE82B24A1FC527AE00B6D756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE82B2481FC527AE00B6D756 /* LaunchScreen.storyboard */; };
 		CE82B24D1FC527AE00B6D756 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE82B24C1FC527AE00B6D756 /* main.m */; };
 		CE82B2571FC527AF00B6D756 /* SNNGeneralProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE82B2561FC527AF00B6D756 /* SNNGeneralProjectTests.m */; };
@@ -54,8 +86,49 @@
 		39D2874C204CE1DB00992ECB /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		39D2874D204CE1DB00992ECB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		39D2874E204CE1DB00992ECB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		39D2874F204CE1DB00992ECB /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
 		39D28750204CE1DB00992ECB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D28757204CE3F900992ECB /* SNNHTTPManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNNHTTPManager.h; sourceTree = "<group>"; };
+		39D28758204CE3F900992ECB /* SNNHTTPManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNNHTTPManager.m; sourceTree = "<group>"; };
+		39D2875F204CEA1000992ECB /* MBHUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHUDTool.m; sourceTree = "<group>"; };
+		39D28760204CEA1000992ECB /* MBHUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHUDTool.h; sourceTree = "<group>"; };
+		39D28764204CEB2D00992ECB /* 加载_00014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00014.png"; sourceTree = "<group>"; };
+		39D28765204CEB2D00992ECB /* 加载_00000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00000.png"; sourceTree = "<group>"; };
+		39D28766204CEB2D00992ECB /* 加载_00001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00001.png"; sourceTree = "<group>"; };
+		39D28767204CEB2D00992ECB /* 加载_00015.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00015.png"; sourceTree = "<group>"; };
+		39D28768204CEB2D00992ECB /* 加载_00003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00003.png"; sourceTree = "<group>"; };
+		39D28769204CEB2D00992ECB /* 加载_00017.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00017.png"; sourceTree = "<group>"; };
+		39D2876A204CEB2D00992ECB /* 加载_00016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00016.png"; sourceTree = "<group>"; };
+		39D2876B204CEB2D00992ECB /* 加载_00002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00002.png"; sourceTree = "<group>"; };
+		39D2876C204CEB2D00992ECB /* 加载_00006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00006.png"; sourceTree = "<group>"; };
+		39D2876D204CEB2D00992ECB /* 加载_00012.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00012.png"; sourceTree = "<group>"; };
+		39D2876E204CEB2D00992ECB /* 加载_00013.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00013.png"; sourceTree = "<group>"; };
+		39D2876F204CEB2D00992ECB /* 加载_00007.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00007.png"; sourceTree = "<group>"; };
+		39D28770204CEB2D00992ECB /* 加载_00011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00011.png"; sourceTree = "<group>"; };
+		39D28771204CEB2D00992ECB /* 加载_00005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00005.png"; sourceTree = "<group>"; };
+		39D28772204CEB2D00992ECB /* 加载_00004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00004.png"; sourceTree = "<group>"; };
+		39D28773204CEB2D00992ECB /* 加载_00010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00010.png"; sourceTree = "<group>"; };
+		39D28774204CEB2D00992ECB /* 加载_00009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00009.png"; sourceTree = "<group>"; };
+		39D28775204CEB2D00992ECB /* 加载_00021.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00021.png"; sourceTree = "<group>"; };
+		39D28776204CEB2D00992ECB /* 加载_00020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00020.png"; sourceTree = "<group>"; };
+		39D28777204CEB2D00992ECB /* 加载_00008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00008.png"; sourceTree = "<group>"; };
+		39D28778204CEB2D00992ECB /* 加载_00022.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00022.png"; sourceTree = "<group>"; };
+		39D28779204CEB2D00992ECB /* 加载_00023.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00023.png"; sourceTree = "<group>"; };
+		39D2877A204CEB2D00992ECB /* 加载_00024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00024.png"; sourceTree = "<group>"; };
+		39D2877B204CEB2D00992ECB /* 加载_00018.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00018.png"; sourceTree = "<group>"; };
+		39D2877C204CEB2D00992ECB /* 加载_00019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加载_00019.png"; sourceTree = "<group>"; };
+		39D28797204D07A500992ECB /* NSArray+NSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+NSNull.m"; sourceTree = "<group>"; };
+		39D28798204D07A500992ECB /* NSArray+NSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+NSNull.h"; sourceTree = "<group>"; };
+		39D2879B204D07C000992ECB /* NSDictionary+NSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSNull.m"; sourceTree = "<group>"; };
+		39D2879C204D07C000992ECB /* NSDictionary+NSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSNull.h"; sourceTree = "<group>"; };
+		39D2879F204D093900992ECB /* NSString+StringSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringSize.h"; sourceTree = "<group>"; };
+		39D287A0204D093900992ECB /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		39D287A1204D093900992ECB /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		39D287A2204D093900992ECB /* NSString+StringSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringSize.m"; sourceTree = "<group>"; };
+		39D287A6204D0F1100992ECB /* ToastMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastMessageView.m; sourceTree = "<group>"; };
+		39D287A7204D0F1100992ECB /* ToastMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastMessageView.h; sourceTree = "<group>"; };
+		39D287A9204D128A00992ECB /* Api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
+		39D287AA204D12AF00992ECB /* ApiTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiTool.h; sourceTree = "<group>"; };
+		39D287AB204D12AF00992ECB /* ApiTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiTool.m; sourceTree = "<group>"; };
 		77F87578B97A15DF0A4760DA /* Pods-SNNGeneralProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNNGeneralProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNNGeneralProject/Pods-SNNGeneralProject.release.xcconfig"; sourceTree = "<group>"; };
 		A2835B10798C379953ECA9D2 /* libPods-SNNGeneralProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNNGeneralProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE82B23A1FC527AE00B6D756 /* SNNGeneralProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNNGeneralProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,7 +137,6 @@
 		CE82B2401FC527AE00B6D756 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE82B2411FC527AE00B6D756 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CE82B2441FC527AE00B6D756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE82B2461FC527AE00B6D756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE82B2491FC527AE00B6D756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE82B24B1FC527AE00B6D756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE82B24C1FC527AE00B6D756 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,8 +178,13 @@
 			isa = PBXGroup;
 			children = (
 				39D28740204CE1DB00992ECB /* HTTPRequest */,
-				39D28745204CE1DB00992ECB /* Reachability */,
 				39D28748204CE1DB00992ECB /* CommonMethod */,
+				39D287A5204D0EA700992ECB /* ToastMessageView */,
+				39D2879E204D093900992ECB /* NSString */,
+				39D28796204D07A500992ECB /* NSArray */,
+				39D2879A204D07C000992ECB /* NSDictionary */,
+				39D2875E204CEA1000992ECB /* MBHUDTool */,
+				39D28745204CE1DB00992ECB /* Reachability */,
 			);
 			path = CommonFiles;
 			sourceTree = "<group>";
@@ -115,10 +192,15 @@
 		39D28740204CE1DB00992ECB /* HTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
-				39D28741204CE1DB00992ECB /* NetWorkError.m */,
-				39D28742204CE1DB00992ECB /* SNNHTTPRequest.m */,
-				39D28743204CE1DB00992ECB /* NetWorkError.h */,
+				39D287A9204D128A00992ECB /* Api.h */,
+				39D287AA204D12AF00992ECB /* ApiTool.h */,
+				39D287AB204D12AF00992ECB /* ApiTool.m */,
 				39D28744204CE1DB00992ECB /* SNNHTTPRequest.h */,
+				39D28742204CE1DB00992ECB /* SNNHTTPRequest.m */,
+				39D28757204CE3F900992ECB /* SNNHTTPManager.h */,
+				39D28758204CE3F900992ECB /* SNNHTTPManager.m */,
+				39D28743204CE1DB00992ECB /* NetWorkError.h */,
+				39D28741204CE1DB00992ECB /* NetWorkError.m */,
 			);
 			path = HTTPRequest;
 			sourceTree = "<group>";
@@ -135,8 +217,8 @@
 		39D28748204CE1DB00992ECB /* CommonMethod */ = {
 			isa = PBXGroup;
 			children = (
-				39D28749204CE1DB00992ECB /* CommonMethod.m */,
 				39D2874A204CE1DB00992ECB /* CommonMethod.h */,
+				39D28749204CE1DB00992ECB /* CommonMethod.m */,
 			);
 			path = CommonMethod;
 			sourceTree = "<group>";
@@ -147,10 +229,128 @@
 				39D2874C204CE1DB00992ECB /* Header.h */,
 				39D2874D204CE1DB00992ECB /* Config.h */,
 				39D2874E204CE1DB00992ECB /* Assets.xcassets */,
-				39D2874F204CE1DB00992ECB /* Api.h */,
 				39D28750204CE1DB00992ECB /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		39D2875E204CEA1000992ECB /* MBHUDTool */ = {
+			isa = PBXGroup;
+			children = (
+				39D28760204CEA1000992ECB /* MBHUDTool.h */,
+				39D2875F204CEA1000992ECB /* MBHUDTool.m */,
+			);
+			path = MBHUDTool;
+			sourceTree = "<group>";
+		};
+		39D28762204CEB2D00992ECB /* ImageSource */ = {
+			isa = PBXGroup;
+			children = (
+				39D28763204CEB2D00992ECB /* 加载 */,
+			);
+			name = ImageSource;
+			path = SNNGeneralProject/ImageSource;
+			sourceTree = "<group>";
+		};
+		39D28763204CEB2D00992ECB /* 加载 */ = {
+			isa = PBXGroup;
+			children = (
+				39D28764204CEB2D00992ECB /* 加载_00014.png */,
+				39D28765204CEB2D00992ECB /* 加载_00000.png */,
+				39D28766204CEB2D00992ECB /* 加载_00001.png */,
+				39D28767204CEB2D00992ECB /* 加载_00015.png */,
+				39D28768204CEB2D00992ECB /* 加载_00003.png */,
+				39D28769204CEB2D00992ECB /* 加载_00017.png */,
+				39D2876A204CEB2D00992ECB /* 加载_00016.png */,
+				39D2876B204CEB2D00992ECB /* 加载_00002.png */,
+				39D2876C204CEB2D00992ECB /* 加载_00006.png */,
+				39D2876D204CEB2D00992ECB /* 加载_00012.png */,
+				39D2876E204CEB2D00992ECB /* 加载_00013.png */,
+				39D2876F204CEB2D00992ECB /* 加载_00007.png */,
+				39D28770204CEB2D00992ECB /* 加载_00011.png */,
+				39D28771204CEB2D00992ECB /* 加载_00005.png */,
+				39D28772204CEB2D00992ECB /* 加载_00004.png */,
+				39D28773204CEB2D00992ECB /* 加载_00010.png */,
+				39D28774204CEB2D00992ECB /* 加载_00009.png */,
+				39D28775204CEB2D00992ECB /* 加载_00021.png */,
+				39D28776204CEB2D00992ECB /* 加载_00020.png */,
+				39D28777204CEB2D00992ECB /* 加载_00008.png */,
+				39D28778204CEB2D00992ECB /* 加载_00022.png */,
+				39D28779204CEB2D00992ECB /* 加载_00023.png */,
+				39D2877A204CEB2D00992ECB /* 加载_00024.png */,
+				39D2877B204CEB2D00992ECB /* 加载_00018.png */,
+				39D2877C204CEB2D00992ECB /* 加载_00019.png */,
+			);
+			path = "加载";
+			sourceTree = "<group>";
+		};
+		39D28796204D07A500992ECB /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				39D28797204D07A500992ECB /* NSArray+NSNull.m */,
+				39D28798204D07A500992ECB /* NSArray+NSNull.h */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		39D2879A204D07C000992ECB /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				39D2879B204D07C000992ECB /* NSDictionary+NSNull.m */,
+				39D2879C204D07C000992ECB /* NSDictionary+NSNull.h */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		39D2879E204D093900992ECB /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				39D287A0204D093900992ECB /* NSString+MD5.h */,
+				39D287A1204D093900992ECB /* NSString+MD5.m */,
+				39D2879F204D093900992ECB /* NSString+StringSize.h */,
+				39D287A2204D093900992ECB /* NSString+StringSize.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		39D287A5204D0EA700992ECB /* ToastMessageView */ = {
+			isa = PBXGroup;
+			children = (
+				39D287A7204D0F1100992ECB /* ToastMessageView.h */,
+				39D287A6204D0F1100992ECB /* ToastMessageView.m */,
+			);
+			path = ToastMessageView;
+			sourceTree = "<group>";
+		};
+		39D287AE204D18E200992ECB /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				39D287B4204D199E00992ECB /* Models */,
+				39D287B3204D199E00992ECB /* ViewControllers */,
+				39D287B2204D199E00992ECB /* ViewModels */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		39D287B2204D199E00992ECB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		39D287B3204D199E00992ECB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		39D287B4204D199E00992ECB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		AACA0BADDB1BFE9EF987E843 /* Pods */ = {
@@ -166,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				CE82B23C1FC527AE00B6D756 /* SNNGeneralProject */,
+				39D28762204CEB2D00992ECB /* ImageSource */,
 				CE82B2551FC527AF00B6D756 /* SNNGeneralProjectTests */,
 				CE82B2601FC527AF00B6D756 /* SNNGeneralProjectUITests */,
 				CE82B23B1FC527AE00B6D756 /* Products */,
@@ -187,14 +388,14 @@
 		CE82B23C1FC527AE00B6D756 /* SNNGeneralProject */ = {
 			isa = PBXGroup;
 			children = (
+				39D287AE204D18E200992ECB /* HomeVC */,
 				39D2873F204CE1DB00992ECB /* CommonFiles */,
-				39D2874B204CE1DB00992ECB /* SupportingFiles */,
 				CE82B23D1FC527AE00B6D756 /* AppDelegate.h */,
 				CE82B23E1FC527AE00B6D756 /* AppDelegate.m */,
 				CE82B2401FC527AE00B6D756 /* ViewController.h */,
 				CE82B2411FC527AE00B6D756 /* ViewController.m */,
+				39D2874B204CE1DB00992ECB /* SupportingFiles */,
 				CE82B2431FC527AE00B6D756 /* Main.storyboard */,
-				CE82B2461FC527AE00B6D756 /* Assets.xcassets */,
 				CE82B2481FC527AE00B6D756 /* LaunchScreen.storyboard */,
 				CE82B24B1FC527AE00B6D756 /* Info.plist */,
 				CE82B24C1FC527AE00B6D756 /* main.m */,
@@ -337,11 +538,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D2878A204CEB2D00992ECB /* 加载_00005.png in Resources */,
+				39D28791204CEB2D00992ECB /* 加载_00022.png in Resources */,
+				39D2878E204CEB2D00992ECB /* 加载_00021.png in Resources */,
+				39D28782204CEB2D00992ECB /* 加载_00017.png in Resources */,
+				39D28780204CEB2D00992ECB /* 加载_00015.png in Resources */,
+				39D28793204CEB2D00992ECB /* 加载_00024.png in Resources */,
+				39D2877D204CEB2D00992ECB /* 加载_00014.png in Resources */,
 				CE82B24A1FC527AE00B6D756 /* LaunchScreen.storyboard in Resources */,
-				CE82B2471FC527AE00B6D756 /* Assets.xcassets in Resources */,
+				39D2878C204CEB2D00992ECB /* 加载_00010.png in Resources */,
 				39D28755204CE1DB00992ECB /* Assets.xcassets in Resources */,
+				39D28786204CEB2D00992ECB /* 加载_00012.png in Resources */,
+				39D28783204CEB2D00992ECB /* 加载_00016.png in Resources */,
+				39D28790204CEB2D00992ECB /* 加载_00008.png in Resources */,
+				39D2878D204CEB2D00992ECB /* 加载_00009.png in Resources */,
+				39D28794204CEB2D00992ECB /* 加载_00018.png in Resources */,
+				39D28784204CEB2D00992ECB /* 加载_00002.png in Resources */,
+				39D28789204CEB2D00992ECB /* 加载_00011.png in Resources */,
+				39D2878B204CEB2D00992ECB /* 加载_00004.png in Resources */,
+				39D2877F204CEB2D00992ECB /* 加载_00001.png in Resources */,
+				39D28792204CEB2D00992ECB /* 加载_00023.png in Resources */,
+				39D28795204CEB2E00992ECB /* 加载_00019.png in Resources */,
+				39D28785204CEB2D00992ECB /* 加载_00006.png in Resources */,
+				39D28781204CEB2D00992ECB /* 加载_00003.png in Resources */,
 				39D28756204CE1DB00992ECB /* Info.plist in Resources */,
+				39D2877E204CEB2D00992ECB /* 加载_00000.png in Resources */,
 				CE82B2451FC527AE00B6D756 /* Main.storyboard in Resources */,
+				39D2878F204CEB2D00992ECB /* 加载_00020.png in Resources */,
+				39D28787204CEB2D00992ECB /* 加载_00013.png in Resources */,
+				39D28788204CEB2D00992ECB /* 加载_00007.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,11 +646,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE82B2421FC527AE00B6D756 /* ViewController.m in Sources */,
+				39D2879D204D07C000992ECB /* NSDictionary+NSNull.m in Sources */,
 				39D28754204CE1DB00992ECB /* CommonMethod.m in Sources */,
+				39D287AC204D12AF00992ECB /* ApiTool.m in Sources */,
 				39D28751204CE1DB00992ECB /* NetWorkError.m in Sources */,
 				CE82B24D1FC527AE00B6D756 /* main.m in Sources */,
 				39D28752204CE1DB00992ECB /* SNNHTTPRequest.m in Sources */,
+				39D287A3204D093900992ECB /* NSString+MD5.m in Sources */,
+				39D28759204CE3F900992ECB /* SNNHTTPManager.m in Sources */,
+				39D287A8204D0F1200992ECB /* ToastMessageView.m in Sources */,
+				39D28761204CEA1000992ECB /* MBHUDTool.m in Sources */,
+				39D287A4204D093900992ECB /* NSString+StringSize.m in Sources */,
 				39D28753204CE1DB00992ECB /* Reachability.m in Sources */,
+				39D28799204D07A600992ECB /* NSArray+NSNull.m in Sources */,
 				CE82B23F1FC527AE00B6D756 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,6 +824,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = /Users/nana/GitHub/SNNGeneralProject/SNNGeneralProject/SupportingFiles/Header.h;
 				INFOPLIST_FILE = SNNGeneralProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzcx.SNNGeneralProject;
@@ -605,6 +839,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = /Users/nana/GitHub/SNNGeneralProject/SNNGeneralProject/SupportingFiles/Header.h;
 				INFOPLIST_FILE = SNNGeneralProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dzcx.SNNGeneralProject;

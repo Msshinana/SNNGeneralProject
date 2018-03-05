@@ -1,0 +1,11 @@
+platform :ios, '8.0'
+target 'SNNGeneralProject' do
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'MBProgressHUD', '~> 1.1.0’
+  pod 'MJRefresh'  ,'~> 3.1.15’
+  pod 'SDWebImage', '~>4.2.2’
+  pod 'FMDB', '~> 2.7.2’
+  pod 'Masonry', '~> 1.1.0’
+  pod 'Bugly', '~> 2.4.8’
+
+end

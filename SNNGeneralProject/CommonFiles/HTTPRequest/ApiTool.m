@@ -18,12 +18,14 @@ static ApiTool * serverURL;
     });
     return serverURL;
 }
-//注册
-- (NSString *) registerURL{
-    return [NSString stringWithFormat:@"%@%@", MYDOMAINURL,REGISTER];
-}
-//登录
-- (NSString *) loginURL{
-    return [NSString stringWithFormat:@"%@%@",MYDOMAINURL,LOGIN];
-}
+- (NSString *) userInfoURL{
+    return [NSString stringWithFormat:@"%@%@", MYDOMAINURL,USERINFO];
+}//获取用户信息
+- (NSString *) statusesTimelineURL{
+    return [NSString stringWithFormat:@"%@%@", MYDOMAINURL,STATUSES_TIMELINE];
+}//获取用户所发布的微博
+- (NSString *) statusesShareURL{
+    return [NSString stringWithFormat:@"%@%@", MYDOMAINURL,STATUSES_SHARE];
+}//分享链接到微博
+
 @end

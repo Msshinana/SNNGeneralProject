@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WeiboSDKDelegate>
 
 @end
 
@@ -17,10 +17,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:kWB_AppKey];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor=[UIColor whiteColor];
+
+    HomeViewController *homeVC = [[HomeViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:homeVC];
+    nav.navigationBar.hidden = YES;
+    self.window.rootViewController = nav;
+    [self.window makeKeyWindow];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
-
-
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -47,5 +63,28 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request {
+    
+}
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response {
+    if ([response isKindOfClass:WBAuthorizeResponse.class])
+    {
+        NSString *userId = [(WBAuthorizeResponse *)response userID];
+        NSString *accessToken = [(WBAuthorizeResponse *)response accessToken];
+        
+        NSLog(@"userId %@",userId);
+        NSLog(@"accessToken %@",accessToken);
+        
+        NSDictionary *notification = @{
+                                       @"userId" : userId,
+                                       @"accessToken" : accessToken
+                                       };
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"weiboDidLoginNotification"
+                                                            object:self userInfo:notification];
+    }
+}
 
 @end

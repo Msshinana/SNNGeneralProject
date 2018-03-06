@@ -63,6 +63,19 @@ static SNNHTTPManager *manager = nil;
     tool.manager = self;
     [self.requestDic setObject:tool forKey:urlString];
 }
+
+- (void)GETrequestWithUrlString:(NSString *)urlString
+            showIndicatorInView:(UIView *)view
+           andCompletionHandler:(HttpManagerCompletionHandler)completion{
+    [self requestWithUrlString:urlString andParams:nil method:HttpRequestMehodGET showIndicatorInView:view andCompletionHandler:completion];
+}
+
+- (void)POSTrequestWithUrlString:(NSString *)urlString
+                       andParams:(NSDictionary *)params
+             showIndicatorInView:(UIView *)view
+            andCompletionHandler:(HttpManagerCompletionHandler)completion{
+    [self requestWithUrlString:urlString andParams:params method:HttpRequestMehodPOST showIndicatorInView:view andCompletionHandler:completion];
+}
 //连续请求接口使用
 - (void)continuousRequestWithUrlString:(NSString *)urlString andParams:(NSDictionary *)params method:(HttpRequestMehod)mehod showIndicatorInView:(UIView *)view andCompletionHandler:(HttpManagerCompletionHandler)completion
 {
@@ -144,7 +157,6 @@ static SNNHTTPManager *manager = nil;
 - (BOOL)isNetworkSuccess
 {
     BOOL isExistenceNetwork = YES;
-    //    Reachability *reach = [Reachability reachabilityWithHostName:@"www.baidu.cn"];
     Reachability *reach = [Reachability reachabilityForInternetConnection];
     switch ([reach currentReachabilityStatus]) {
         case NotReachable:

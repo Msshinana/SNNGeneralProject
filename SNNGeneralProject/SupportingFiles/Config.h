@@ -8,6 +8,8 @@
 
 #ifndef Config_h
 #define Config_h
+#define kWB_AppKey                     @"2759558236"
+#define kRedirectURL                   @"http://www.shinana.com"
 
 #define kWeakSelf(weakSelf)  __weak __typeof(&*self)weakSelf = self
 #define kStrongSelf(strongSelf)  __strong __typeof(weakSelf)strongSelf = weakSelf

@@ -38,6 +38,19 @@ typedef void(^HttpManagerCompletionHandler)(NSDictionary *resBodyDic, NSError *e
                    showIndicatorInView:(UIView *)view
                   andCompletionHandler:(HttpManagerCompletionHandler)completion;//连续请求
 /**
+ *  默认GET
+ */
+- (void)GETrequestWithUrlString:(NSString *)urlString
+         showIndicatorInView:(UIView *)view
+        andCompletionHandler:(HttpManagerCompletionHandler)completion;
+/**
+ *  默认POST
+ */
+- (void)POSTrequestWithUrlString:(NSString *)urlString
+                      andParams:(NSDictionary *)params
+            showIndicatorInView:(UIView *)view
+           andCompletionHandler:(HttpManagerCompletionHandler)completion;
+/**
  *  下载图片
  */
 - (void)downloadImageWithUrlString:(NSString *)urlString

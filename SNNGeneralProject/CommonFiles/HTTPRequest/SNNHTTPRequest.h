@@ -28,23 +28,8 @@ typedef void(^HttpUploadImageCompletionHandler)(UIImage *image, NSDictionary *re
 + (SNNHTTPRequest *)requestWithUrlString:(NSString *)urlString
                            paramasDic:(NSDictionary *)params
                                method:(HttpRequestMehod)method
-                    completionHandler:(HttpCompletionHandler)completion;
-
-+ (SNNHTTPRequest *)requestWithUrlString:(NSString *)urlString
-                           paramasDic:(NSDictionary *)params
-                               method:(HttpRequestMehod)method
                   showIndicatorInView:(UIView *)view
                     completionHandler:(HttpCompletionHandler)completion;
-
-+ (SNNHTTPRequest *)postWithUrlString:(NSString *)urlString
-                        paramasDic:(NSDictionary *)params
-                            method:(HttpRequestMehod)method
-                 completionHandler:(HttpCompletionHandler)completion;
-
-+ (SNNHTTPRequest *)getWithUrlString:(NSString *)urlString
-                       paramasDic:(NSDictionary *)params
-                           method:(HttpRequestMehod)method
-                completionHandler:(HttpCompletionHandler)completion;
 
 + (void)downloadImageWithUrlString:(NSString *)urlString placeholderImage:(UIImage *)image imageView:(UIImageView *)imageView;
 

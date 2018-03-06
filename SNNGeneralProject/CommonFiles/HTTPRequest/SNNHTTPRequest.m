@@ -37,20 +37,6 @@
 
 @implementation SNNHTTPRequest
 
-- (void)dealloc
-{
-    
-}
-
-- (instancetype)init
-{
-    if (self = [super init])
-    {
-        
-    }
-    return self;
-}
-
 + (SNNHTTPRequest *)requestWithUrlString:(NSString *)urlString paramasDic:(NSDictionary *)params method:(HttpRequestMehod)method showIndicatorInView:(UIView *)view completionHandler:(HttpCompletionHandler)completion
 {
     SNNHTTPRequest *tool          = [[SNNHTTPRequest alloc] init];
@@ -70,31 +56,11 @@
             [MBHUDTool showHUDAddedTo:view animated:YES];
         }
     });
-    kWeakSelf(weakSelf);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        kStrongSelf(strongSelf);
-        [strongSelf p_startRequest];
+        [tool p_startRequest];
     });
 
     return tool;
-}
-
-+ (SNNHTTPRequest *)requestWithUrlString:(NSString *)urlString paramasDic:(NSDictionary *)params method:(HttpRequestMehod)method completionHandler:(HttpCompletionHandler)completion
-{
-    return [self requestWithUrlString:UIWindowDidResignKeyNotification paramasDic:params method:method showIndicatorInView:nil completionHandler:completion];
-}
-
-
-#pragma mark post
-+ (SNNHTTPRequest *)postWithUrlString:(NSString *)urlString paramasDic:(NSDictionary *)params method:(HttpRequestMehod)method completionHandler:(HttpCompletionHandler)completion
-{
-    return [self requestWithUrlString:urlString paramasDic:params method:HttpRequestMehodPOST completionHandler:completion];
-}
-
-#pragma mark get
-+ (SNNHTTPRequest *)getWithUrlString:(NSString *)urlString paramasDic:(NSDictionary *)params method:(HttpRequestMehod)method completionHandler:(HttpCompletionHandler)completion
-{
-    return [self requestWithUrlString:urlString paramasDic:params method:HttpRequestMehodGET completionHandler:completion];
 }
 
 + (void)downloadImageWithUrlString:(NSString *)urlString placeholderImage:(UIImage *)image imageView:(UIImageView *)imageView
@@ -124,70 +90,18 @@
     {
         [postBodyDic setObject:[[NSDictionary alloc] init] forKey:@"body"];
     }
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    NSString *phoneNum = [defaults objectForKey:@"phoneNum"];
 
-    NSString *token=[defaults objectForKey:@"token"];
-
-    if(token==nil){
-        token=@"";
-    }
-    if (phoneNum == nil)
-    {
-        phoneNum = @"";
-    }
-    NSDictionary *headDic;
-    headDic = @{
-                @"screeny" : @(kScreenHeight),
-                @"screenx" : @(kScreenWidth),
-                @"mos" : @"iphone",
-                @"ver" : [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"],
-                @"de" : [CommonMethod getTime],
-                @"phone":phoneNum,
-                @"imei":[defaults objectForKey:@"identifierForAdvertising"],
-                };
+    NSDictionary *headDic = @{
+                              
+                              };
     [postBodyDic setObject:headDic forKey:@"head"];
 
     self.paramasDic = postBodyDic;
 
-    //NSString *encryptionString=[[Encryption shareSingle] encryptionDictionaryToString:postBodyDic];//加密字符串
-    //NSData *encryptionData=[encryptionString dataUsingEncoding:NSUTF8StringEncoding];
-
-    //NSData *jsonData=[encryptionData gzippedData];
-    //NSData *jsonData=encryptionData;
-
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postBodyDic options:NSJSONWritingPrettyPrinted error:nil];
-
-    //   NSData *restrictData=[NSJSONSerialization dataWithJSONObject:postBodyDic options:NSJSONWritingPrettyPrinted error:nil];
-    //
-    //NSData *jsonData=[LFCGzipUtility gzipData:encryptionData];
-
-
-    //NSData *jsonData  =[testData gzippedData];
-
-
-    //    NSMutableData *tempJsonData = [NSMutableData dataWithData:jsonData];
-    //    self.httpRequest                = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:self.urlString]];
-    //
-    //    self.httpRequest.delegate       = self;
-    //    self.httpRequest.timeOutSeconds = 60;
-    //    [self.httpRequest addRequestHeader:@"Content-Type" value:@"application/json; encoding=utf-8"];
-    //    [self.httpRequest addRequestHeader:@"Accept" value:@"application/json"];
-    //    [self.httpRequest setRequestMethod:@"POST"];
-    //    [self.httpRequest setPostBody:tempJsonData];
-    //    [self.httpRequest startAsynchronous];
-
 
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
 
-    //   NSString * cerPath = [[NSBundle mainBundle] pathForResource:cerResource ofType:@".cer"];
-    //   NSData * cerData = [NSData dataWithContentsOfFile:cerPath];
-    //
-    //#ifdef DEBUG
-    //      manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone withPinnedCertificates:[NSSet setWithObjects:cerData,nil]];
-    //#else
-    //    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate withPinnedCertificates:[NSSet setWithObjects:cerData,nil]];
-    //#endif
     manager.securityPolicy.allowInvalidCertificates = YES;
     [manager.securityPolicy setValidatesDomainName:NO];
 
@@ -198,18 +112,11 @@
         req = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:self.urlString parameters:nil error:nil];
     }
 
-    //   if ([self.urlString isEqualToString:[[ServerURL sharedInit] getCarImg]]) {
-    //      req.timeoutInterval = 5;
-    //   }
-    //   else {
-    //      req.timeoutInterval= 30;
-    //   }
     req.timeoutInterval= 10;
 
     [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-
     [req setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [req setValue:token forHTTPHeaderField:@"Authorization"];
+
 
     [req setHTTPBody:jsonData];
     AFHTTPResponseSerializer *resonseSerial =  [AFHTTPResponseSerializer serializer];
@@ -219,27 +126,18 @@
     [[manager dataTaskWithRequest:req completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         kStrongSelf(strongSelf);
         if (!error) {
-            //strongSelf.resBodyDic = [[Encryption shareSingle] privateKeyDecryptionToDic:responseObject];
             strongSelf.resBodyDic=[NSJSONSerialization JSONObjectWithData:responseObject
                                                                   options: NSJSONReadingMutableContainers
                                                                     error: &error];
-
-            if([strongSelf tokenValidation:strongSelf.resBodyDic]){
-                [strongSelf p_requestCompleted];
-            }else{
-                //token过期和验证失败逻辑
-                [self.manager removeRequestWithKey:self.urlString];
-                
-                return ;
-            }
+            [strongSelf p_requestCompleted];
         } else {
-            NSLog(@"网络请求错误");
             if (strongSelf.showView)
             {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [MBProgressHUD hideHUDForView:strongSelf.showView animated:YES];
                 });
             }
+            [ToastMessageView showTsMessage:error.localizedDescription inView:[[UIApplication sharedApplication] keyWindow] replaceCurrentIfExists:YES];
             [strongSelf.manager removeRequestWithKey:strongSelf.urlString];
         }
     }] resume];
@@ -278,7 +176,6 @@
         [formData appendPartWithFileData:UIImageJPEGRepresentation(image,0.5) name:@"file"fileName:[CommonMethod getImageName:image] mimeType:@"image/jpg"];
         
     } progress:^(NSProgress *_Nonnull uploadProgress) {
-        //NSLog(@"uploadProgress = %@",uploadProgress);
     } success:^(NSURLSessionDataTask *_Nonnull task,id _Nullable responseObject) {
         self.uploadImageCompletionHandler(self.image, responseObject, nil);
     } failure:^(NSURLSessionDataTask *_Nullable task, NSError *_Nonnull error) {

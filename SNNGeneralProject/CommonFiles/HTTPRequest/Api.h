@@ -20,9 +20,9 @@
 
 #endif
 //获取用户信息
-#define USERINFO                           @"/2/users/show.json"
+#define USERINFO                           @"https://api.weibo.com/2/users/show.json"
 //获取用户所发布的微博
-#define STATUSES_TIMELINE                  @"/2/statuses/user_timeline.json"
+#define STATUSES_TIMELINE                  @"https://api.weibo.com/2/statuses/user_timeline.json"
 //分享链接到微博
 #define STATUSES_SHARE                     @"/2/statuses/share.json"
 

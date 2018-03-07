@@ -26,5 +26,6 @@
 
 #import "HomeViewController.h"
 #import "UserInfoModel.h"
+#import "CommonParams.h"
 
 #endif /* Header_h */

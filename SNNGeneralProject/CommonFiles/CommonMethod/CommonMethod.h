@@ -12,4 +12,5 @@
 @interface CommonMethod : NSObject
 + (NSString *) getTime;
 + (NSString *) getImageName:(UIImage *)image;
++ (UIImage *) imageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth;
 @end

@@ -7,11 +7,16 @@
 //
 
 #import "HomeViewController.h"
+#import "UserInfoViewModel.h"
+#import "StatuesViewModel.h"
+#import "HomeTableViewCell.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UIImageView *headerImage;
-@property (nonatomic, strong) UserInfoModel *userInfoModel;
+@property (weak, nonatomic) IBOutlet UITableView *tabelView;
+
+@property (nonatomic, strong) NSMutableArray *statuesTimelineArray;
 
 @end
 
@@ -20,6 +25,65 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self weiboSendRequest];
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(weiboDidLoginNotification:) name:@"weiboDidLoginNotification" object:nil];
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"weiboDidLoginNotification" object:nil];
+}
+
+- (void)weiboDidLoginNotification:(NSNotification*)notification{
+
+    [self p_getWeiboUserInfo];
+    [self p_getWeiboStatuseTimeline];
+}
+- (void)p_getWeiboUserInfo{
+    kWeakSelf(weakSelf);
+    UserInfoViewModel *userInfoViewModel = [[UserInfoViewModel alloc]initWithUIViewConroller:self];
+    [userInfoViewModel p_getWeiboUserInfo:^(UserInfoModel *returnValue) {
+        kStrongSelf(strongSelf);
+        UserInfoModel *userInfoModel = (UserInfoModel *)returnValue;
+        strongSelf.username.text = userInfoModel.name;
+        [strongSelf.headerImage sd_setImageWithURL:[NSURL URLWithString:userInfoModel.profile_image_url] placeholderImage:[UIImage imageNamed:@""]];
+        
+    }];
+
+}
+- (void)p_getWeiboStatuseTimeline{
+    kWeakSelf(weakSelf);
+    StatuesViewModel *statuesViewModel = [[StatuesViewModel alloc]initWithUIViewConroller:self];
+    [statuesViewModel p_getWeiboStatuseTimeline:^(NSMutableArray *returnValue) {
+        kStrongSelf(strongSelf);
+        strongSelf.statuesTimelineArray = (NSMutableArray *)returnValue;
+        [strongSelf.tabelView reloadData];
+    }];
+}
+
+#pragma mark UITableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.statuesTimelineArray.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 360;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HomeTableViewCell *homeTableViewCell = [HomeTableViewCell creatCellWithItemsContent:self.statuesTimelineArray inTableView:tableView forIndexPath:indexPath];
+    return homeTableViewCell;
+}
+
+- (NSMutableArray *)statuesTimelineArray{
+    if (!_statuesTimelineArray) {
+        _statuesTimelineArray = [NSMutableArray array];
+    }
+    return _statuesTimelineArray;
+}
+
+- (void)weiboSendRequest{
     WBAuthorizeRequest *request = [WBAuthorizeRequest request];
     request.redirectURI = kRedirectURL;
     request.scope = @"all";
@@ -29,35 +93,7 @@
                          @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
     [WeiboSDK sendRequest:request];
 }
-- (void)viewWillAppear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(weiboDidLoginNotification:) name:@"weiboDidLoginNotification" object:nil];
-}
-- (void)viewWillDisappear:(BOOL)animated{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"weiboDidLoginNotification" object:nil];
-}
-- (void)weiboDidLoginNotification:(NSNotification*)notification{
-    NSDictionary *result=[notification userInfo];
-    NSString *accessToken = [result objectForKey:@"accessToken"];
-    NSString *uid = [result objectForKey:@"userId"];
-    [self p_getWeiboUserInfoWithAccessToken:accessToken uid:uid];
-}
-- (void)p_getWeiboUserInfoWithAccessToken:(NSString *)accessToken uid:(NSString *)uid {
 
-    NSString *url =[NSString stringWithFormat:
-                    @"https://api.weibo.com/2/users/show.json?access_token=%@&uid=%@",accessToken,uid];
-    
-    [[SNNHTTPManager shareManger]GETrequestWithUrlString:url showIndicatorInView:nil andCompletionHandler:^(NSDictionary *resBodyDic, NSError *error) {
-        if(resBodyDic){
-            self.userInfoModel = [[UserInfoModel alloc]initWithDic:resBodyDic];
-            [self refreshUI];
-        }
-    }];
-    
-}
-- (void)refreshUI{
-    self.username.text = self.userInfoModel.name;
-    [self.headerImage sd_setImageWithURL:[NSURL URLWithString:self.userInfoModel.profile_image_url] placeholderImage:[UIImage imageNamed:@""]];
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

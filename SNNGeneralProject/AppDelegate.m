@@ -81,6 +81,8 @@
                                        @"userId" : userId,
                                        @"accessToken" : accessToken
                                        };
+        [CommonParams shareInstance].userId = [notification objectForKeyCheck:@"userId"];
+        [CommonParams shareInstance].accessToken = [notification objectForKeyCheck:@"accessToken"];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"weiboDidLoginNotification"
                                                             object:self userInfo:notification];

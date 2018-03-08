@@ -28,15 +28,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hfx-YE-zbV">
-                        <rect key="frame" x="20" y="65" width="280" height="284.5"/>
+                        <rect key="frame" x="20" y="70" width="280" height="289.5"/>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Hfx-YE-zbV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="BAE-fN-28P"/>
-                    <constraint firstItem="Hfx-YE-zbV" firstAttribute="top" secondItem="9f2-o7-xSu" secondAttribute="bottom" constant="5" id="Exm-gZ-tOK"/>
+                    <constraint firstItem="Hfx-YE-zbV" firstAttribute="top" secondItem="9f2-o7-xSu" secondAttribute="bottom" constant="10" id="Exm-gZ-tOK"/>
                     <constraint firstItem="9f2-o7-xSu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="FGP-gy-yDo"/>
                     <constraint firstItem="9f2-o7-xSu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Jjq-9n-cgC"/>
-                    <constraint firstAttribute="bottom" secondItem="Hfx-YE-zbV" secondAttribute="bottom" constant="10" id="cOL-4T-RNt"/>
+                    <constraint firstAttribute="bottom" secondItem="Hfx-YE-zbV" secondAttribute="bottom" id="cOL-4T-RNt"/>
                     <constraint firstAttribute="trailing" secondItem="9f2-o7-xSu" secondAttribute="trailing" constant="20" id="fP8-vg-B30"/>
                     <constraint firstAttribute="trailing" secondItem="Hfx-YE-zbV" secondAttribute="trailing" constant="20" id="gFL-zt-IqC"/>
                 </constraints>

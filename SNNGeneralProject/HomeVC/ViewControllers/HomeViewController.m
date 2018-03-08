@@ -12,9 +12,6 @@
 #import "HomeTableViewCell.h"
 
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UILabel *username;
-@property (weak, nonatomic) IBOutlet UIImageView *headerImage;
-@property (weak, nonatomic) IBOutlet UITableView *tabelView;
 
 @property (nonatomic, strong) NSMutableArray *statuesTimelineArray;
 
@@ -25,7 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
     [self weiboSendRequest];
     
 }
@@ -41,6 +37,10 @@
     [self p_getWeiboUserInfo];
     [self p_getWeiboStatuseTimeline];
 }
+
+/**
+ * 在ViewModel中处理请求
+ */
 - (void)p_getWeiboUserInfo{
     kWeakSelf(weakSelf);
     UserInfoViewModel *userInfoViewModel = [[UserInfoViewModel alloc]initWithUIViewConroller:self];
@@ -49,9 +49,7 @@
         UserInfoModel *userInfoModel = (UserInfoModel *)returnValue;
         strongSelf.username.text = userInfoModel.name;
         [strongSelf.headerImage sd_setImageWithURL:[NSURL URLWithString:userInfoModel.profile_image_url] placeholderImage:[UIImage imageNamed:@""]];
-        
     }];
-
 }
 - (void)p_getWeiboStatuseTimeline{
     kWeakSelf(weakSelf);
@@ -69,11 +67,10 @@
     return self.statuesTimelineArray.count;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 360;
+    return [[HomeTableViewCell creatCellWithItemsContent:self.statuesTimelineArray inTableView:tableView forIndexPath:indexPath] getCellHeight];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HomeTableViewCell *homeTableViewCell = [HomeTableViewCell creatCellWithItemsContent:self.statuesTimelineArray inTableView:tableView forIndexPath:indexPath];
-    return homeTableViewCell;
+    return [HomeTableViewCell creatCellWithItemsContent:self.statuesTimelineArray inTableView:tableView forIndexPath:indexPath];
 }
 
 - (NSMutableArray *)statuesTimelineArray{

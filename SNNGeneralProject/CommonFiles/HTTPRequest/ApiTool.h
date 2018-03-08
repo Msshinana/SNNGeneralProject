@@ -13,5 +13,5 @@
 
 - (NSString *) userInfoURL;//获取用户信息
 - (NSString *) statusesTimelineURL;//获取用户所发布的微博
-- (NSString *) statusesShareURL;//分享链接到微博
+
 @end

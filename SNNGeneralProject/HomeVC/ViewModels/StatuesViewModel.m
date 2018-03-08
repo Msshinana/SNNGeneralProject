@@ -17,7 +17,9 @@
     }
     return self;
 }
-
+/**
+ * 获取用户所发布的微博/GET
+ */
 - (void)p_getWeiboStatuseTimeline:(ReturnStatuesValueBlock )returnBlock{
     self.returnBlock=returnBlock;
     NSString *url = [NSString stringWithFormat:@"%@?access_token=%@",STATUSES_TIMELINE,[[CommonParams shareInstance] accessToken]];

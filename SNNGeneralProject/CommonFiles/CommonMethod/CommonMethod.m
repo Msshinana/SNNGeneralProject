@@ -117,4 +117,11 @@
     UIGraphicsEndImageContext();
     return newImage;
 }
+//URL转Image
++ (UIImage *)getImageFromUrlString:(NSString *)urlString{
+    NSString *encoding = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSData *imageDate = [NSData dataWithContentsOfURL:[NSURL URLWithString:encoding]];
+    UIImage *img=[[UIImage alloc] initWithData:imageDate];
+    return img;
+}
 @end

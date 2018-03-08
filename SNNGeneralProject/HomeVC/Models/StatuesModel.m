@@ -13,12 +13,12 @@
     self = [super init];
     if (self) {
         self.text = [dic objectForKeyCheck:@"text"];
+        
         NSArray *picArray = [dic objectForKeyCheck:@"pic_urls"];
         self.thumbnail_picArray = [NSMutableArray array];
         for (int i=0; i<picArray.count; i++) {
             NSDictionary *picDic = [picArray objectAtIndexCheck:i];
-            self.thumbnail_pic = [picDic objectForKeyCheck:@"thumbnail_pic"];
-            [self.thumbnail_picArray addObject:self.thumbnail_pic];
+            [self.thumbnail_picArray addObject:[picDic objectForKeyCheck:@"thumbnail_pic"]];
         }
 
     }

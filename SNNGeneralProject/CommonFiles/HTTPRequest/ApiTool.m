@@ -24,8 +24,5 @@ static ApiTool * serverURL;
 - (NSString *) statusesTimelineURL{
     return [NSString stringWithFormat:@"%@%@", MYDOMAINURL,STATUSES_TIMELINE];
 }//获取用户所发布的微博
-- (NSString *) statusesShareURL{
-    return [NSString stringWithFormat:@"%@%@", MYDOMAINURL,STATUSES_SHARE];
-}//分享链接到微博
 
 @end

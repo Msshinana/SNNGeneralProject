@@ -16,6 +16,9 @@
     }
     return self;
 }
+/**
+ * 获取微博用户信息/GET
+ */
 - (void)p_getWeiboUserInfo:(ReturnUserInfoValueBlock )returnBlock{
     self.returnBlock=returnBlock;
     NSString *url =[NSString stringWithFormat:

@@ -12,7 +12,6 @@
 
 @property (nonatomic,strong)NSString *text;//微博信息内容
 @property (nonatomic,strong)NSMutableArray *thumbnail_picArray;//缩略图片地址
-@property (nonatomic,strong)NSString *thumbnail_pic;
 
 - (id)initWithDic:(NSDictionary *)dic;
 
